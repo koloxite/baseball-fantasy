@@ -1,0 +1,86 @@
+html, body{
+    margin: 0;
+    padding: 0; 
+}
+
+.heading{
+    background-color: aqua;
+    background-size: cover;
+}
+
+.button ul{
+    list-style: none;
+    background-color: black;
+    position: relative;
+    font-size: 45;
+}
+
+.button ul li{
+    display: inline-block;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 40px;
+}
+
+li:hover{
+    background: red;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+h1{
+    color: red;
+    font-size: 72px;
+}
+
+p{
+    position: static;
+    width: 500px;
+}
+
+input{
+    position: static;
+    padding: inherit;
+    width: 60px;
+}
+
+.PName{
+    position: static;
+    padding: inherit;
+    width: 120px;
+}
+
+.login{
+    width: 150px;
+}
+
+.Blogin{
+    text-align: center;
+}
+
+.Clogin{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table, th, td{
+    border: solid;
+    border-width: thin;
+    border-collapse: collapse;
+}
+
+tr{
+    text-align: center;
+}
+
+.pTable{
+    margin-top: 50px;
+}
+

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/FantasyPickerStyle.css') }}"
+        <title>Fantasy Picker Login</title>
+    </head>
+    <body>
+        <div class="heading">
+            <h1>Login</h1>
+            <div class="button">
+                <ul>
+                    <a href="./FantasyPicker.html"><li>Home</li></a>
+                    <a href="FantasyPickerMyTeam.html"><li>My Team</li></a>
+                    <a href="FantasyPickerLogin.html"><li>Login</li></a>
+                </ul>
+            </div>
+        </div>
+      <form method="post">
+        <div class="Clogin">
+            <input type="text" placeholder="Username" class="login" name="username" id="username" required>
+        </div>
+        <div class="Clogin">
+            <input type="text" placeholder="Password" class="login" name = "password" id="password" required>
+        </div>
+        <div class="Blogin">
+            <input type="submit" value="login">
+            <button type="button">Add User</button>
+        </div>
+      </form>
+
+    </body>
+</html>

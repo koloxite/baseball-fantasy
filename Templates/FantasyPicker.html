@@ -1,0 +1,137 @@
+<html>
+	<head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/FantasyPickerStyle.css') }}"
+        <title>Fantasy Picker</title>
+    </head>
+    <body>
+        <div class="heading">
+            <h1>Fantasy Assitant</h1>
+            <div class="button">
+                <ul>
+                    <a href="./FantasyPicker.html"><li>Home</li></a>
+                    <a href="FantasyPickerMyTeam.html"><li>My Team</li></a>
+                    <a href="FantasyPickerLogin.html"><li>Login</li></a>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h3>Home</h3>
+            <div>
+							<form method = "post" value="search">
+								<input type="hidden" name="flag" value="search">
+                <p>Welcome to Fantasy Picker. Here you can search for players based on their names, positions, stats or any combination of the three. Find the best players you can to add to your team and win your fantasy league!</p>
+                <input type="text" placeholder="First Name" class="PName" name = "firstName">
+								<input type="text" placeholder="Last Name" class="PName" id = "lastName" name = "lastName">
+                <input type="text" placeholder="HR" name = "HR">
+                <input type="text" placeholder="BA" name = "BA">
+                <input type="text" placeholder="SLG" name = "SLG">
+                <input type="text" placeholder="OBP" name = "OBP">
+								<input type="text" placeholder="ERA" name = "ERA">
+ 								<input type="text" placeholder="Wins" id = "wins" name = "wins">
+								<input type="text" placeholder="Losses" id = "losses" name = "losses">
+ 								<input type="text" placeholder="SO" id = "SO" name = "SO">
+ 								<input type="text" placeholder="WHIP" id = "WHIP" name = "WHIP">
+
+                 <select name = "POS">
+                    <option value="All">Pos</option>
+                    <option value="P">P</option>
+                    <option value="C">C</option>
+                    <option value="1B">1B</option>
+                    <option value="2B">2B</option>
+                    <option value="3B">3B</option>
+                    <option value="SS">SS</option>
+                    <option value="LF">LF</option>
+                    <option value="CF">CF</option>
+                    <option value="RF">RF</option>
+                </select>
+                <input type="submit" value="Search">
+							</form>
+            </div>
+            <div>
+                <table id = "myTable" style="width: 100%">
+                    <tr>
+
+                        <th>First Name</th>
+												<th>Last Name</th>
+                        <th>Team</th>
+                        <th>Pos</th>
+                        <th>AB</th>
+                        <th>R</th>
+                        <th>H</th>
+                        <th>HR</th>
+                        <th>RBI</th>
+                        <th>SB</th>
+                        <th>BA</th>
+                        <th>OBP</th>
+                        <th>OPS</th>
+                        <th>SLG</th>
+                        <th>Add</th>
+                    </tr>
+										{% for row in session['b'] %}
+										<form method="post">
+                    <tr>
+											<input type="hidden" value="add" name="flag">
+											<input type="hidden" value="{{ row[0] }}" name="pid">
+                        <td>{{ row[1] }}</td>
+												<td>{{ row[2] }}</td>
+                        <td>{{ row[3] }}</td>
+                        <td>{{ row[4] }}</td>
+                        <td>{{ row[5] }}</td>
+                        <td>{{ row[6] }}</td>
+                        <td>{{ row[7] }}</td>
+                        <td>{{ row[8] }}</td>
+                        <td>{{ row[9] }}</td>
+                        <td>{{ row[10] }}</td>
+                        <td>{{ row[11] }}</td>
+                        <td>{{ row[12] }}</td>
+                        <td>{{ row[13] }}</td>
+                        <td>{{ row[14] }}</td>
+                        <td><input type="submit" value="add"></td>
+                    </tr>
+									</form>
+										{% endfor %}
+                </table>
+            </div>
+            <div>
+                <table id="pitcherTable" style="width: 100%" class="pTable">
+									<tr>
+                        <th>First Name</th>
+												<th>Last Name</th>
+                        <th>Team</th>
+                        <th>Pos</th>
+                        <th>W</th>
+                        <th>L</th>
+                        <th>ERA</th>
+                        <th>G</th>
+                        <th>GS</th>
+                        <th>SV</th>
+                        <th>IP</th>
+                        <th>SO</th>
+                        <th>WHIP</th>
+                        <th>Add</th>
+									</tr>
+										{% for row in session['p'] %}
+										<input type="hidden" value="add" name="flag">
+										<input type="hidden" value="{{ row[0] }}" name="pid">
+										<tr>
+											<td>{{ row[1] }}</td>
+											<td>{{ row[2] }}</td>
+											<td>{{ row[3] }}</td>
+											<td>{{ row[4] }}</td>
+											<td>{{ row[15] }}</td>
+											<td>{{ row[16] }}</td>
+											<td>{{ row[17] }}</td>
+											<td>{{ row[18] }}</td>
+											<td>{{ row[19] }}</td>
+											<td>{{ row[20] }}</td>
+											<td>{{ row[21] }}</td>
+											<td>{{ row[22] }}</td>
+											<td>{{ row[23] }}</td>
+											<td><input type="submit" value="add"></td>
+										</tr>
+										{% endfor %}
+                </table>
+            </div>
+        </div>
+		</body>
+</html>

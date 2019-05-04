@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/FantasyPickerStyle.css') }}"
+        <title>My Team</title>
+    </head>
+    <body>
+        <div class="heading">
+            <h1>My Team</h1>
+            <div class="button">
+                <ul>
+                    <a href="./FantasyPicker.html"><li>Home</li></a>
+                    <a href="FantasyPickerMyTeam.html"><li>My Team</li></a>
+                    <a href="FantasyPickerLogin.html"><li>Login</li></a>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <table style="width: 100%">
+                <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Team</th>
+                        <th>Pos</th>
+                        <th>AB</th>
+                        <th>R</th>
+                        <th>H</th>
+                        <th>HR</th>
+                        <th>RBI</th>
+                        <th>SB</th>
+                        <th>BA</th>
+                        <th>OBP</th>
+                        <th>OPS</th>
+                        <th>SLG</th>
+                        <th>Remove</th>
+                </tr>
+                <tr>
+                    <td>Jose Reyes</td>
+                    <td>NYM</td>
+                    <td>.277</td>
+                    <td>15</td>
+                    <td>.345</td>
+                    <td>.688</td>
+                    <td><button type="button">remove</button></td>
+                </tr>
+            </table>
+        </div>
+         <div>
+                <table id="pitcherTable2" style="width: 100%" class="pTable">
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Team</th>
+                        <th>Pos</th>
+                        <th>W</th>
+                        <th>L</th>
+                        <th>ERA</th>
+                        <th>G</th>
+                        <th>GS</th>
+                        <th>SV</th>
+                        <th>IP</th>
+                        <th>SO</th>
+                        <th>WHIP</th>
+                        <th>Add</th>
+                </table>
+        </div>
+    </body>
+</html>
